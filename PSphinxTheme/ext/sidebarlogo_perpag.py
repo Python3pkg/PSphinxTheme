@@ -67,7 +67,7 @@ def sidebarlogo_perpag_html_logo(app, pagename, templatename, ctx, event_arg):
    tmp_logo = ctx.get('logo')
 
    found_per_page = False
-   for img_key, page_name_set in conf_sidebar_logo_dict.items():
+   for img_key, page_name_set in list(conf_sidebar_logo_dict.items()):
       if pagename in page_name_set:
          # check pagename in more than one set
          if found_per_page:

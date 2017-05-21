@@ -123,7 +123,7 @@ def setup(app):
    import sphinx.roles as mod
 
    names = [
-      key for key, value in mod.specific_docroles.items()
+      key for key, value in list(mod.specific_docroles.items())
       if value is mod.emph_literal_role
    ]
    for name in names:
